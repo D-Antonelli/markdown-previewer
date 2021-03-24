@@ -1,8 +1,7 @@
 # :zap: Markdown Previewer React App
 
 A responsive React app built for converting user text into markdown preview.
-\
-\
+
 ## Design Demo;
 ![gif image of project](public/markdown-previewer.gif)
 
