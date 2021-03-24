@@ -3,6 +3,8 @@
 A responsive React app built for converting user text into markdown preview.
 \
 \
+## Design Demo;
+\
 ![gif image of project](public/markdown-previewer.gif)
 
 From [FreeCodeCamp's](https://www.freecodecamp.org/learn/front-end-libraries/front-end-libraries-projects/build-a-markdown-previewer) Front End Development Libraries Projects. 
