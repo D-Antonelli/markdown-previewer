@@ -1,8 +1,8 @@
 # :zap: Markdown Previewer React App
 
 A responsive React app built for converting user text into markdown preview.
-\
-\
+
+## Design Demo;
 ![gif image of project](public/markdown-previewer.gif)
 
 From [FreeCodeCamp's](https://www.freecodecamp.org/learn/front-end-libraries/front-end-libraries-projects/build-a-markdown-previewer) Front End Development Libraries Projects. 
@@ -21,3 +21,4 @@ React (Hooks), CSS, Styled Components
 :scissors: Introduced copy to clipboard and delete options to the text editor. 
 
 :arrows_counterclockwise: Retrieve theme settings in user's next visit to app or reload the page. 
+
