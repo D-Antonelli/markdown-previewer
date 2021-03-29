@@ -1,20 +1,30 @@
 import { createGlobalStyle } from "styled-components"
 
 export const GlobalStyles = createGlobalStyle`
+    body {
+       background-color: ${({ theme }) => theme.body};
+    }
+
     .text {
-        color: ${({ theme }) => theme.text};
-        transition: all 0.50s linear;
+        color: ${({ theme }) => theme.text}; 
+        transition: all 0.50s linear;     
     }
 
     #header {
-        background-color: ${({ theme }) => theme.headerBackground}
+        background-color: ${({ theme }) => theme.headerBackground};
     }
 
     #logo-icon {
-        color: ${({ theme }) => theme.logoColor}
+        color: ${({ theme }) => theme.logoColor};
     }
 
     #toggle-icon {
-        color: ${({ theme }) => theme.logoColor}
+        color: ${({ theme }) => theme.logoColor};
+    }
+
+    .edit,
+    .preview {
+        background-color: ${({ theme }) => theme.background};
+        border: solid 2px ${({ theme }) => theme.text};
     }
 `;
