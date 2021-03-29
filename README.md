@@ -20,5 +20,5 @@ React (Hooks), CSS, Styled Components
 
 :scissors: Introduced copy to clipboard and delete options to the text editor. 
 
-:arrows_counterclockwise: Retrieve theme settings in user's next visit to app or reload the page. 
+:arrows_counterclockwise: Retrieve theme settings from local storage on next visit to app or page reload. 
 
