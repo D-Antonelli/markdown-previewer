@@ -19,3 +19,5 @@ React (Hooks), CSS, Styled Components
 :nail_care: Using [styled components](https://styled-components.com/), upgraded project with dark mode.
 
 :scissors: Introduced copy to clipboard and delete options to the text editor. 
+
+:arrows_counterclockwise: Retrieve theme settings in user's next visit to app or reload the page. 
