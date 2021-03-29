@@ -6,6 +6,7 @@ import { GlobalStyles } from "./components/globalStyles";
 import { lightTheme, darkTheme } from "./components/Themes";
 
 import Header from "./components/header";
+import Main from "./components/main";
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -28,6 +29,7 @@ function App() {
     <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
       <GlobalStyles />
       <Header onClick={themeToggler} toggleTheme={theme} />
+      <Main />
     </ThemeProvider>
   );
 }
