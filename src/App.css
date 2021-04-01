@@ -44,7 +44,6 @@
   padding: 0 3vw;
   display: flex;
   /* overflow: hidden; */
-  background-color: transparent;
 }
 
 .edit,
@@ -57,6 +56,37 @@
   flex-grow: 1;
   box-shadow: 5px 5px 15px #000000;
 }
+
+.edit-header,
+.preview-header {
+  position: absolute;
+  height: 30px;
+  width: 100%;
+  top: 0;
+  z-index: 1001;
+  padding: 0 1vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.edit-title,
+.preview-title {
+  text-transform: capitalize;
+}
+
+.edit-button-group {
+  display: flex;
+  align-items: center;
+}
+
+.edit-button-group > *:not(:last-child) {
+  margin-right: .8vw;
+}
+
+
+
+
 
 .column {
   width: 3vw;
