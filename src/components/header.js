@@ -13,7 +13,7 @@ const Header = ({ onClick, toggleTheme }) => {
           </div>
           <h1 id="logo-text">
             <span id="logo-text--1">markdown</span>
-            <span id="logo-text--2" className="text">
+            <span id="logo-text--2" className="textTheme">
               previewer
             </span>
           </h1>
