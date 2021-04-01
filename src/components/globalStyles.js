@@ -5,9 +5,9 @@ export const GlobalStyles = createGlobalStyle`
        background-color: ${({ theme }) => theme.body};
     }
 
-    .text {
+    .textTheme {
         color: ${({ theme }) => theme.text}; 
-        transition: all 0.50s linear;     
+        transition: all 0.50s linear;            
     }
 
     #header {
@@ -25,12 +25,12 @@ export const GlobalStyles = createGlobalStyle`
     .edit,
     .preview {
         background-color: ${({ theme }) => theme.background};
-        border: solid 1px ${({ theme }) => theme.text};
+        border: solid .1rem ${({ theme }) => theme.text};
     }
 
     .edit-header,
     .preview-header {
         background-color: ${({ theme }) => theme.textHeader};
-        border-bottom: solid 1px ${({ theme }) => theme.text};
+        border-bottom: solid .1rem ${({ theme }) => theme.text};
     }
 `;
