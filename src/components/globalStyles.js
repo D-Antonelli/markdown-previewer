@@ -25,6 +25,12 @@ export const GlobalStyles = createGlobalStyle`
     .edit,
     .preview {
         background-color: ${({ theme }) => theme.background};
-        border: solid 2px ${({ theme }) => theme.text};
+        border: solid 1px ${({ theme }) => theme.text};
+    }
+
+    .edit-header,
+    .preview-header {
+        background-color: ${({ theme }) => theme.textHeader};
+        border-bottom: solid 1px ${({ theme }) => theme.text};
     }
 `;
