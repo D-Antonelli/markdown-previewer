@@ -17,6 +17,7 @@
 
 #logo-icon {
   margin-right: 0.8rem;
+  font-size: 2rem;
 }
 
 #logo-text {
@@ -60,7 +61,7 @@
 .edit-header,
 .preview-header {
   position: absolute;
-  height: 30px;
+  height: 3.5rem;
   width: 100%;
   top: 0;
   z-index: 1001;
@@ -81,12 +82,19 @@
 }
 
 .edit-button-group > *:not(:last-child) {
-  margin-right: .8vw;
+  margin-right: 1.5rem;
+}
+
+.header-btn {
+  font-size: 1.6rem;
 }
 
 
-
-
+.collapsing {
+  -webkit-transition: none !important;
+  transition: none !important;
+  display: none !important;
+}
 
 .column {
   width: 3vw;
