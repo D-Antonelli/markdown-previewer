@@ -1,6 +1,13 @@
 # :zap: Markdown Previewer React App
 
-A responsive React app built for converting user text into markdown preview.
+## What is Markdown
+Markdown is a lightweight formatting language for creating formatted text using a plain text editor.
+
+## What is Markdown Previewer
+Markdown Previewer lets users render markup text in visual format as they type.
+
+## Why Markdown Previewer
+Because it's cool to see how your text looks like!  
 
 ## Design Demo;
 ![gif image of project](public/markdown-previewer.gif)
