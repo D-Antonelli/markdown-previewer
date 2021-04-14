@@ -21,7 +21,9 @@
 }
 
 #logo-text {
+  font-size: 2rem;
   text-transform: uppercase;
+  font-weight: 600;
 }
 
 #logo-text--1 {
@@ -42,7 +44,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
-  padding: 0 3vw;
+  padding: 0 1vw;
   display: flex;
   /* overflow: hidden; */
 }
@@ -50,12 +52,117 @@
 .edit,
 .preview {
   position: relative;
-  height: 80vh;
+  height: 85vh;
   display: inline-block;
   flex-basis: 45vw;
   flex-shrink: 1;
   flex-grow: 1;
   box-shadow: 5px 5px 15px #000000;
+  overflow: hidden;
+  background-color: var(--clr-light);
+}
+
+.preview-text > *:first-child {
+  margin-top: 0 !important;
+}
+
+
+.preview blockquote {
+  padding: 0 1em;
+  color: #6a737d;
+  border-left: 0.25em solid #dfe2e5;
+}
+
+.preview h1,
+.preview h2 {
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #eaecef;
+}
+
+.preview h1, .preview h2, .preview h3, .preview h4, .preview h5, .preview h6 {
+    margin-top: 2.4rem;
+    margin-bottom: 1.6rem;
+    font-weight: 600;
+    line-height: 1.25;
+}
+
+.preview p {
+  line-height: 1.8;
+}
+
+.preview p,
+.preview ol,
+.preview ul {
+  margin-bottom: 2.7rem;
+}
+
+.preview ol,
+.preview ul {
+  padding-left: 4rem;
+}
+
+.preview ol li,
+.preview ul li {
+  margin-bottom: .8rem;
+}
+
+.preview pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f6f8fa;
+  border-radius: 3px;
+}
+
+.preview pre code {
+  display: inline;
+  max-width: auto;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: initial;
+  border: 0;
+}
+
+.preview code {
+    padding: .2em .4em;
+    margin: 0;
+    font-size: 85%;
+    background-color: rgba(27,31,35,.05);
+    border-radius: 3px;
+}
+
+.preview table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+}
+
+.preview table tr {
+ /*background-color: #fff; */
+  border-top: 1px solid #c6cbd1;
+}
+
+.preview table th {
+  padding: 6px 13px;
+  border: 1px solid #dfe2e5;
+}
+
+.preview table td {
+  padding: 6px 13px;
+  border: 1px solid #dfe2e5;
+}
+
+/*.preview table tr:nth-child(2n) {
+  background-color: #f6f8fa;
+} */
+
+.preview img {
+  max-width: 100%;
+  background-color: transparent;
 }
 
 .edit-header,
@@ -65,15 +172,23 @@
   width: 100%;
   top: 0;
   z-index: 1001;
-  padding: 0 1vw;
+  padding-right: 1vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+.edit-header,
+.preview-header
+ {
+  padding-left: 1vw;
+}
+
 .edit-title,
 .preview-title {
   text-transform: capitalize;
+  font-size: 1.7rem;
+  font-weight: 600;
 }
 
 .edit-button-group {
@@ -89,7 +204,6 @@
   font-size: 1.6rem;
 }
 
-
 .collapsing {
   -webkit-transition: none !important;
   transition: none !important;
@@ -97,5 +211,55 @@
 }
 
 .column {
-  width: 3vw;
+  width: 1vw;
+}
+
+.edit-body,
+.preview-body {
+  position: absolute;
+  top: 3.5rem;
+  height: 94%;
+  width: 100%;
+  padding: 0 1vw;
+}
+
+.edit-text {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  resize: none;
+  border: none;
+}
+
+.edit-text:focus {
+  outline: none;
+}
+
+.edit-text,
+.preview-text {
+  font-size: 1.6rem;
+  padding-top: 0.8rem;
+}
+
+.preview-body {
+  overflow-y: scroll;
+}
+
+footer {
+  background-color: var(--clr-dm-header);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 3.2rem;
+  width: 100%;
+  z-index: 1001;
+}
+
+.footer-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 2rem;
 }
