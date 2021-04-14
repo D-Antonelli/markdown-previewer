@@ -11,12 +11,12 @@ const Header = ({ onClick, toggleTheme }) => {
           <div id="logo-icon">
             <FontAwesomeIcon icon={faMarkdown}></FontAwesomeIcon>
           </div>
-          <h1 id="logo-text">
+          <div id="logo-text">
             <span id="logo-text--1">markdown</span>
             <span id="logo-text--2" className="textTheme">
               previewer
             </span>
-          </h1>
+          </div>
         </div>
         <button id="theme-toggle" onClick={onClick}>
           <FontAwesomeIcon
