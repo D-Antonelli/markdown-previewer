@@ -200,6 +200,10 @@
   margin-right: 1.5rem;
 }
 
+.text-copied {
+  font-size: 1.35rem;
+}
+
 .header-btn {
   font-size: 1.6rem;
 }
@@ -230,6 +234,7 @@
   resize: none;
   border: none;
 }
+
 
 .edit-text:focus {
   outline: none;
