@@ -33,4 +33,12 @@ export const GlobalStyles = createGlobalStyle`
         background-color: ${({ theme }) => theme.textHeader};
         border-bottom: solid .1rem ${({ theme }) => theme.text};
     }
+
+    .preview table tr {
+        background-color: ${({ theme }) => theme.background};
+    }
+
+    .preview table tr:nth-child(2n) {
+        background-color: ${({ theme }) => theme.tableColor};
+}
 `;
