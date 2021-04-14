@@ -1,69 +1,46 @@
-const input = `# Markdown syntax guide
+const input = `# Welcome to my React Markdown Previewer!
 
-## Headers
+## This is a sub-heading...
+### And here's some other cool stuff:
 
-# This is a Heading h1
-## This is a Heading h2 
-###### This is a Heading h6
-
-## Emphasis
-
-*This text will be italic*  
-_This will also be italic_
-
-**This text will be bold**  
-__This will also be bold__
-
-_You **can** combine them_
-
-## Lists
-
-### Unordered
-
-* Item 1
-* Item 2
-* Item 2a
-* Item 2b
-
-### Ordered
-
-1. Item 1
-1. Item 2
-1. Item 3
-  1. Item 3a
-  1. Item 3b
-
-## Images
-
-![This is a alt text.](/image/sample.png "This is a sample image.")
-
-## Links
-
-You may be using [Markdown Live Preview](https://markdownlivepreview.com/).
-
-## Blockquotes
-
-> Markdown is a lightweight markup language with plain-text-formatting syntax, created in 2004 by John Gruber with Aaron Swartz.
->
->> Markdown is often used to format readme files, for writing messages in online discussion forums, and to create rich text using a plain text editor.
-
-## Tables
-
-| Left columns  | Right columns |
-| ------------- |:-------------:|
-| left foo      | right foo     |
-| left bar      | right bar     |
-| left baz      | right baz     |
-
-## Blocks of code
+Heres some code, \`<div></div>\`, between 2 backticks.
 
 \`\`\`
-let message = 'Hello world';
-alert(message);
+// this is multi-line code:
+
+function anotherExample(firstLine, lastLine) {
+  if (firstLine == '\`\`\`' && lastLine == '\`\`\`') {
+    return multiLineCode;
+  }
+}
 \`\`\`
 
-## Inline code
+You can also make text **bold**... whoa! \
+Or _italic_. \
+Or... wait for it... **_both!_** \
+And feel free to go crazy ~~crossing stuff out~~.
 
-This web site is using \`markedjs/marked\`.`;
+There's also [links](https://www.freecodecamp.com), and
+> Block Quotes!
+
+And if you want to get really crazy, even tables:
+
+Wild Header | Crazy Header | Another Header?
+------------ | ------------- | -------------
+Your content can | be here, and it | can be here....
+And here. | Okay. | I think we get it.
+
+- And of course there are lists.
+  - Some are bulleted.
+     - With different indentation levels.
+        - That look like this.
+
+
+1. And there are numbererd lists too.
+1. Use just 1s if you want!
+1. And last but not least, let's not forget embedded images:
+
+![React Logo w/ Text](https://ensocore.com/media/61/reactjs-logo-sticker%20%281%29.jpg)
+`;
 
 export default input;
