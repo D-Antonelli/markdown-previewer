@@ -2,13 +2,13 @@ import React, { useState, useRef } from "react";
 
 import {
   faClipboard,
-  faTrashAlt,
-  faExpandAlt,
+  faTrashAlt
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Collapse } from "react-bootstrap";
 import marked from "marked";
 import input from "./defaultInput";
+import Resize from "./resize";
 
 const Main = () => {
   const [isEditOpen, setIsEditOpen] = useState(true);
@@ -57,6 +57,7 @@ const Main = () => {
 
             <div className="edit-button-group">
               <span className="text-copied textTheme">{copySuccess}</span>
+
               <button
                 className="header-btn textTheme"
                 onClick={copyToClipboard}
@@ -73,20 +74,14 @@ const Main = () => {
               >
                 <FontAwesomeIcon icon={faTrashAlt}></FontAwesomeIcon>
               </button>
-              <button
+              <Resize
                 onClick={() => {
                   setIsPreviewOpen(!isPreviewOpen);
                   setIsColumnOpen(!isColumnOpen);
                 }}
-                type="button"
-                className="header-btn textTheme"
-                aria-expanded={isPreviewOpen}
-                aria-controls="collapsePreview"
-                data-toggle="tooltip"
-                title="Resize"
-              >
-                <FontAwesomeIcon icon={faExpandAlt}></FontAwesomeIcon>
-              </button>
+                ariaExpanded={isPreviewOpen}
+                ariaControls="collapsePreview"
+              ></Resize>
             </div>
           </div>
           <div className="edit-body">
@@ -111,20 +106,14 @@ const Main = () => {
         <div className="preview collapsePreview">
           <div className="preview-header">
             <div className="preview-title textTheme">previewer</div>
-            <button
-              onClick={() => {
+            <Resize onClick={() => {
                 setIsEditOpen(!isEditOpen);
                 setIsColumnOpen(!isColumnOpen);
               }}
-              className="header-btn textTheme"
-              type="button"
-              aria-expanded="true"
-              aria-controls="collapseEditor"
-              data-toggle="tooltip"
-              title="Resize"
-            >
-              <FontAwesomeIcon icon={faExpandAlt}></FontAwesomeIcon>
-            </button>
+              ariaExpanded={isEditOpen}
+              ariaControls="collapseEditor"
+              >
+              </Resize>
           </div>
           <div className="preview-body">
             <div
