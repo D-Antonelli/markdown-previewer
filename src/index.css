@@ -45,9 +45,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1 {
-  font-size: 2rem !important;
-}
 
 button {
   background-color: unset;
