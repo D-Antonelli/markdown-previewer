@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import {
   faClipboard,
@@ -7,18 +7,30 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Collapse } from "react-bootstrap";
+import marked from "marked";
+import input from "./defaultInput";
 
 const Main = () => {
   const [isEditOpen, setIsEditOpen] = useState(true);
   const [isPreviewOpen, setIsPreviewOpen] = useState(true);
   const [isColumnOpen, setIsColumnOpen] = useState(true);
+  const [userInput, setUserInput] = useState(input);
+
+  const handleChange = function (event) {
+    setUserInput(event.target.value);
+  };
+
+  const getMarkdownText = function () {
+    var rawMarkup = marked(userInput);
+    return { __html: rawMarkup };
+  };
 
   return (
     <div id="main-container">
       <Collapse in={isEditOpen}>
         <div className="edit collapseEditor">
           <div className="edit-header">
-            <h3 className="edit-title textTheme">editor</h3>
+            <div className="edit-title textTheme">editor</div>
             <div className="edit-button-group">
               <button className="header-btn textTheme">
                 <FontAwesomeIcon icon={faClipboard}></FontAwesomeIcon>
@@ -40,7 +52,16 @@ const Main = () => {
               </button>
             </div>
           </div>
-          <div className="edit-body"></div>
+          <div className="edit-body">
+            <textarea
+              className="edit-text textTheme"
+              autoComplete="off"
+              autoCorrect="off"
+              spellCheck="false"
+              value={userInput}
+              onChange={handleChange}
+            />
+          </div>
         </div>
       </Collapse>
 
@@ -51,7 +72,7 @@ const Main = () => {
       <Collapse in={isPreviewOpen}>
         <div className="preview collapsePreview">
           <div className="preview-header">
-            <h3 className="preview-title textTheme">previewer</h3>
+            <div className="preview-title textTheme">previewer</div>
             <button
               onClick={() => {
                 setIsEditOpen(!isEditOpen);
@@ -65,7 +86,12 @@ const Main = () => {
               <FontAwesomeIcon icon={faExpandAlt}></FontAwesomeIcon>
             </button>
           </div>
-          <div className="preview-body"></div>
+          <div className="preview-body">
+            <div
+              className="preview-text textTheme"
+              dangerouslySetInnerHTML={getMarkdownText()}
+            />
+          </div>
         </div>
       </Collapse>
     </div>
